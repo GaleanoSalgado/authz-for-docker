@@ -29,8 +29,8 @@ def authz_request():
     print("AuthZ Request")
     print(request.data)
 
-    plugin_request = json.loads(request.data)
-    has_said_hello = _has_said_hello()
+    #plugin_request = json.loads(request.data)
+    #has_said_hello = _has_said_hello()
 
     return {"Allow": True, "Msg":   "The request authorization succeeded."}
 
