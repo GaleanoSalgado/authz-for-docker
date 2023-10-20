@@ -32,6 +32,9 @@ def authz_request():
     #plugin_request = json.loads(request.data)
     #has_said_hello = _has_said_hello()
 
+    return {"Allow": False,
+                    "Msg":   "The request authorization failed. You must say hello first",
+                    "Err":   "You must say hello first."}
     return {"Allow": True, "Msg":   "The request authorization succeeded."}
 
     if has_said_hello:
