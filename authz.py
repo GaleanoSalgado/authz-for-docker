@@ -16,6 +16,10 @@ def activate():
 def authz_request():
     print("AuthZ Request")
     print(request.data)
+
+    with open('archivo.txt', 'w') as archivo:
+        mensaje = request.data
+        archivo.write(mensaje)
     
     return {"Allow": True, "Msg":   "The request authorization succeeded."}
 
